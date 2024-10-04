@@ -1,5 +1,5 @@
 AFRAME.registerComponent("page-controls", {
-    scheme: {
+    schema: {
         pages: {type: 'array', default: [
             {
                 page: 'page1',
@@ -34,11 +34,11 @@ AFRAME.registerComponent("page-controls", {
         var pageIndex = this.data.pageIndex;
 
         window.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowRight" & pageIndex < 4) {
+            if (e.key === "ArrowRight" && pageIndex < 4) {
                 pageIndex += 1;
                 this.turnpage(pageIndex);
             }
-            if (e.key === "ArrowLeft" & pageIndex > 0) {
+            if (e.key === "ArrowLeft" && pageIndex > 0) {
                 pageIndex -=1;
                 this.turnpage(pageIndex);
             }
@@ -49,7 +49,7 @@ AFRAME.registerComponent("page-controls", {
 turnpage: function (pageIndex) {
     var page = this.data.pages;
     var pageId = pages[pageIndex].page;
-    var pagecolor = pages[page].color;
+    var pagecolor = pages[pageIndex].color;
     this.pageEl.setAttribute("layer","src","#" + pageId);
     this.el.sceneEl.setAttribute("background","color",pagecolor);
 }
