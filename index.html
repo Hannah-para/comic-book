@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Comic</title>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <script src="page-controls.js"></script>
+    </head>
+    <body>
+        <a-scene background="color:blue">
+        <a-assets >
+
+            <img id="page1" src="blackbird.jpg">
+            <img id="page2" src="comic1.jpg">
+            <img id="page3" src="comic2.jpg">
+            <img id="page4" src="comic3.jpg">
+            <img id="page5" src="comic4.jpg">
+    
+         </a-assets>
+         <a-entity layer="src:#page1; height:3; width: 1.9" page-controls></a-entity>
+        </a-scene>
+    </body>
+</html>
